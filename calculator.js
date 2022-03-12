@@ -28,10 +28,25 @@ app.post("/bmiCalculator", function(req, res){
  var height = parseFloat(req.body.height);
  var bmi = weight/Math.pow(height,2);
 bmi = bmi.toFixed(2);
-res.send("Your BMI is "+ bmi);
+
+if(bmi< 18.5){
+  res.send("Your BMI is "+ bmi + ". You are underweight");
+}
+
+else if(bmi >= 18.5 && bmi <= 24.9){
+  res.send("Your BMI is "+ bmi + ". You are in a great shape");
+}
+
+else if(bmi >= 25 && bmi <= 29.9){
+  res.send("Your BMI is "+ bmi + ". You are overweight");
+}
+
+else{
+  res.send("Your BMI is "+ bmi + ". You are Obese");
+
+}
+
 });
-
-
 
 app.listen(3000,function(){
   console.log("server listening on port 3000");

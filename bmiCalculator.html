@@ -3,13 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles2.css">
   </head>
   <body>
+    <div class = "bmi_calc">
+      <h1>BMI Calculator</h1>
     <form class="" action="/bmicalculator" method="post">
-      <input type="text" name="weight" placeholder="Weight (kg)">
-      <input type="text" name="height" placeholder="Height (m)">
-      <button type="submit" name="button">Calculate</button>
+      <input type="text" name="weight" placeholder="Weight (kg)" required>
+      <input type="text" name="height" placeholder="Height (m)" required>
+      <input type="submit" name="button" value = "Calculate BMI" class = "btn"/>
     </form>
+  </div>
 
     <script type="text/javascript" src = "calculator.js"></script>
   </body>
